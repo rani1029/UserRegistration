@@ -9,8 +9,8 @@ namespace UserRegistration
             //Console.WriteLine("Hello World!");
             // UserEntryValidation.FirstName();
             // UserEntryValidation.LastName();
-            //UserEntryValidation.PhoneNumber();
-            UserEntryValidation.Email();
+            UserEntryValidation.PhoneNumber();
+            //UserEntryValidation.Email();
         }
     }
 }
