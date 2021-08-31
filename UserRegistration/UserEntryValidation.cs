@@ -22,7 +22,7 @@ namespace UserRegistration
 
         public static void LastName()
         {
-            string RegexLastName = "^[A - Z]{ 1}[a-z]{ 2,}$";
+            const string RegexLastName = "^[A - Z]{ 1}[a-z]{ 2,}$";
 
             Console.WriteLine("enter valid last name");
 
@@ -32,5 +32,33 @@ namespace UserRegistration
             Console.WriteLine("lasttname is valid " + validation2);
 
         }
+
+        public static void Email()
+        {
+            const string RegexEmail = "^[a-zA-Z0-9]+[_.]+[.]([a-zA-Z0-9])+[@][a-z]{2}[.][a-zA-Z]{2}[.]([a-zA-Z])+$";
+
+            Console.WriteLine("enter valid Email");
+
+            string Email = Console.ReadLine();
+
+            bool validation3 = Regex.IsMatch("Email", RegexEmail);
+            Console.WriteLine("Email is valid " + validation3);
+
+        }
+
+        public static void PhoneNumber()
+        {
+            const string RegexPhoneNumber = "^[1-9]{1,2}[ ][1-9]{1}[0-9]{9}$";
+
+            Console.WriteLine("enter valid PhoneNumber");
+
+            string PhoneNumber = Console.ReadLine();
+
+            bool validation2 = Regex.IsMatch(PhoneNumber, RegexPhoneNumber);
+            Console.WriteLine("PhoneNumber is valid " + validation2);
+
+        }
+
+
     }
 }
