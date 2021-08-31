@@ -7,7 +7,8 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
-            UserEntryValidation.FirstName();
+            // UserEntryValidation.FirstName();
+            UserEntryValidation.LastName();
         }
     }
 }

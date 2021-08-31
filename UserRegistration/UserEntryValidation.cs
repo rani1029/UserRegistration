@@ -17,6 +17,20 @@ namespace UserRegistration
 
             bool validation = Regex.IsMatch(Firstname, RegexFirstName);
             Console.WriteLine("firstname is valid " + validation);
+
+        }
+
+        public static void LastName()
+        {
+            string RegexLastName = "^[A - Z]{ 1}[a-z]{ 2,}$";
+
+            Console.WriteLine("enter valid last name");
+
+            string Lastname = Console.ReadLine();
+
+            bool validation2 = Regex.IsMatch(Lastname, RegexLastName);
+            Console.WriteLine("lasttname is valid " + validation2);
+
         }
     }
 }
