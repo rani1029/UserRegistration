@@ -2,15 +2,17 @@
 
 namespace UserRegistration
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //Console.WriteLine("Hello World!");
             // UserEntryValidation.FirstName();
             // UserEntryValidation.LastName();
-            UserEntryValidation.PhoneNumber();
+            //UserEntryValidation.PhoneNumber();
             //UserEntryValidation.Email();
+            //UserEntryValidation.MultipleCheck();
+            UserEntryValidation.PassWord();
         }
     }
 }

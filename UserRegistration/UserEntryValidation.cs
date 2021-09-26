@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistration
 {
-    class UserEntryValidation
+    public class UserEntryValidation
     {
         public static void FirstName()
         {
@@ -35,7 +35,8 @@ namespace UserRegistration
 
         public static void Email()
         {
-            const string RegexEmail = "^[a-zA-Z0-9]+[_.]+[.]([a-zA-Z0-9])+[@][a-z]{2}[.][a-zA-Z]{2}[.]([a-zA-Z])+$";
+            //"@^[a-z0-9]+([.]?[\+\-_][a-zA-Z0-9])*[@][a-z0-9]+[\+]?[a-z]+([\.][a-zA-Z])*$"
+            const string RegexEmail = "^[a-zA-Z0-9]+[_.]+[.]([a-zA-Z0-9])+[@][a-z]{2}[.][a-zA-Z]{2}[.]([a-zA-Z])+";
 
             Console.WriteLine("enter valid Email");
 
@@ -43,6 +44,18 @@ namespace UserRegistration
 
             bool validation3 = Regex.IsMatch("Email", RegexEmail);
             Console.WriteLine("Email is valid " + validation3);
+        }
+        public static void MultipleCheck()
+        {
+            Console.WriteLine("do u want to enter another email press y or n");
+            string UserReply = Console.ReadLine();
+            if (UserReply == "y")
+            {
+                Email();
+
+            }
+            else
+                Console.WriteLine(" wrong input");
 
         }
 
@@ -58,7 +71,17 @@ namespace UserRegistration
             Console.WriteLine("PhoneNumber is valid " + validation2);
 
         }
-
-
+        //method to check pattern for password of minimum 8 charactor
+        public static void PassWord()
+        {
+            const string RegexPassword = @"^[A-Z0-9a-z@!#$%&*+?]{8,25}$";
+            Console.WriteLine("enter  Password");
+            string Password = Console.ReadLine();
+            bool Passwordvalidation = Regex.IsMatch(Password, RegexPassword);
+            Console.WriteLine(" Password is valid :" + Passwordvalidation);
+        }
     }
 }
+
+
+
