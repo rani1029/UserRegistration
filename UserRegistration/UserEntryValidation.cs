@@ -71,10 +71,10 @@ namespace UserRegistration
             Console.WriteLine("PhoneNumber is valid " + validation2);
 
         }
-        //method to check pattern for password should have atleast one upper case charactor
+        //method to check pattern for password should have atleast one Numeric value 
         public static void PassWord()
         {
-            const string RegexPassword = @"^[A-Z]{1,}[0-9a-z@!#$%&*+?]{8,25}$";
+            const string RegexPassword = @"^([A-Z0-9]+)([a-z@!#$%&*+?]*).{8,25}$";
             Console.WriteLine("enter  Password");
             string Password = Console.ReadLine();
             bool Passwordvalidation = Regex.IsMatch(Password, RegexPassword);
