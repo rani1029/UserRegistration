@@ -1,2 +1,2 @@
-# UserRegistration
-user registration program  with use cases
+# UserRegistrationException
+user registration Exception program  with use cases
